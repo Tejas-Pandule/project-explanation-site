@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SOHAM | AARYANS POWER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<main class="layout">
+
+
+  <div class="workspace">
+
+    <!-- =========================
+         QUESTIONS
+    ========================== -->
+
+    <aside class="questions">
+
+      <div class="questions-title">Questions</div>
+
+
+      <!-- QUESTION 1 -->
+
+      <button
+        class="question"
+        data-index="0"
+        data-drive-id="1h-kR3pCZpoKuRycn4_97zKMXZ6QL-jnG"
+        data-title="What is SOHAM, and what problem is Aaryans Power aiming to solve?"
+      >
+        <span class="num">01</span>
+        <span>
+          What is SOHAM, and what problem is Aaryans Power aiming to solve?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 2 -->
+
+      <button
+        class="question"
+        data-index="1"
+        data-drive-id="1jHqsPJgwBm4XPgZbfAIN51ZFq_rNJhhQ"
+        data-title="How does SOHAM generate hydrogen?"
+      >
+        <span class="num">02</span>
+        <span>
+          How does SOHAM generate hydrogen?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 3 -->
+
+      <button
+        class="question"
+        data-index="2"
+        data-drive-id="1CBJG6S2je2DWx03N-ifZGPDFRBOLaLIN"
+        data-title="Why is SOHAM described as “Green Ingots and Orange Hydrogen?”"
+      >
+        <span class="num">03</span>
+        <span>
+          Why is SOHAM described as “Green Ingots and Orange Hydrogen?”
+        </span>
+      </button>
+
+
+      <!-- QUESTION 4 -->
+
+      <button
+        class="question"
+        data-index="3"
+        data-drive-id="1SFIG5eU0FCZ850aphX_lapjYipUzKXLl"
+        data-title="What are the principal components of the SOHAM plant?"
+      >
+        <span class="num">04</span>
+        <span>
+          What are the principal components of the SOHAM plant?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 5 -->
+
+      <button
+        class="question"
+        data-index="4"
+        data-drive-id="1-5orvRs6_NGOHzy3THM96XbDhxxkM8cb"
+        data-title="How much hydrogen can SOHAM produce, and how is the capacity controlled?"
+      >
+        <span class="num">05</span>
+        <span>
+          How much hydrogen can SOHAM produce, and how is the capacity controlled?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 6 -->
+
+      <button
+        class="question"
+        data-index="5"
+        data-drive-id="18tWaKVS4ckv9cj-dohrekTDDnfHw3aQZ"
+        data-title="How does SOHAM purify, dry, compress and store hydrogen?"
+      >
+        <span class="num">06</span>
+        <span>
+          How does SOHAM purify, dry, compress and store hydrogen?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 7 -->
+
+      <button
+        class="question"
+        data-index="6"
+        data-drive-id="1c56CYHD82niMwGV8zYjykxx0X_tmfBIf"
+        data-title="What roles do automation, IoT, AI and the digital twin play?"
+      >
+        <span class="num">07</span>
+        <span>
+          What roles do automation, IoT, AI and the digital twin play?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 8 -->
+
+      <button
+        class="question"
+        data-index="7"
+        data-drive-id="1k7OuiKdwJUqvKzlHyO1ftIzK_2roS9RX"
+        data-title="How are sodium aluminate and other residues managed?"
+      >
+        <span class="num">08</span>
+        <span>
+          How are sodium aluminate and other residues managed?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 9 -->
+
+      <button
+        class="question"
+        data-index="8"
+        data-drive-id="1e9cPjj37K1uSX6d4tyHZBiwgPOpUfnkq"
+        data-title="What safety systems protect the SOHAM plant?"
+      >
+        <span class="num">09</span>
+        <span>
+          What safety systems protect the SOHAM plant?
+        </span>
+      </button>
+
+
+      <!-- QUESTION 10 -->
+
+      <button
+        class="question"
+        data-index="9"
+        data-drive-id="1TVCduBUSPHGKgCDdpXV_d6BMj-QQbkDc"
+        data-title="Where can SOHAM be deployed, and how does it differ from electrolysis?"
+      >
+        <span class="num">10</span>
+        <span>
+          Where can SOHAM be deployed, and how does it differ from electrolysis?
+        </span>
+      </button>
+
+    </aside>
+
+
+
+    <!-- =========================
+         VIDEO VIEWER
+    ========================== -->
+
+    <section class="viewer">
+
+      <div class="viewer-head">
+
+        <div>
+
+          <div class="eyebrow">
+            Video
+          </div>
+
+          <div
+            class="viewer-title"
+            id="title"
+          >
+            Select a question
+          </div>
+
+        </div>
+
+
+        <div
+          class="status"
+          id="status"
+        >
+          Ready
+        </div>
+
+      </div>
+
+
+
+      <div
+        class="video"
+        id="video"
+      >
+
+        <div class="placeholder">
+
+          <div>
+
+            <strong>
+              Select a question
+            </strong>
+
+            <span>
+              The video will appear here.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+
+<script>
+
+/* =========================================
+   GET ELEMENTS
+========================================= */
+
+const buttons = [
+  ...document.querySelectorAll(".question")
+];
+
+const title = document.getElementById("title");
+
+const status = document.getElementById("status");
+
+const video = document.getElementById("video");
+
+
+
+/* =========================================
+   LOAD VIDEO
+========================================= */
+
+function selectVideo(button) {
+
+  /* Remove active state */
+  buttons.forEach(b => {
+    b.classList.remove("active");
+  });
+
+
+  /* Add active state */
+  button.classList.add("active");
+
+
+  /* Get Drive ID */
+  const driveId = (
+    button.dataset.driveId || ""
+  ).trim();
+
+
+  /* Get question title */
+  const questionTitle =
+    button.dataset.title || "";
+
+
+  /* Update title */
+  title.textContent = questionTitle;
+
+
+
+  /* =========================================
+     VIDEO NOT CONFIGURED
+  ========================================= */
+
+  if (!driveId) {
+
+    status.textContent =
+      "Not configured";
+
+    video.innerHTML = `
+      <div class="placeholder">
+
+        <div>
+
+          <strong>
+            Video not configured
+          </strong>
+
+          <span>
+            Add the Google Drive file ID in this page.
+          </span>
+
+        </div>
+
+      </div>
+    `;
+
+    return;
+  }
+
+
+
+  /* =========================================
+     VIDEO AVAILABLE
+  ========================================= */
+
+  status.textContent =
+    "Playing";
+
+
+  /*
+     Google Drive embedded player.
+
+     autoplay=1 asks Google Drive to
+     automatically start the video.
+  */
+
+  const driveUrl =
+    "https://drive.google.com/file/d/"
+    + encodeURIComponent(driveId)
+    + "/preview?autoplay=1";
+
+
+  video.innerHTML = `
+
+    <iframe
+
+      src="${driveUrl}"
+
+      allow="autoplay; fullscreen"
+
+      allowfullscreen
+
+      title="${escapeHtml(questionTitle)}"
+
+    ></iframe>
+
+  `;
+
+}
+
+
+
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHtml(text) {
+
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+
+/* =========================================
+   QUESTION CLICK
+========================================= */
+
+buttons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      selectVideo(button);
+
+    }
+  );
+
+});
+
+
+
+/* =========================================
+   OPEN QUESTION 1 ON PAGE LOAD
+========================================= */
+
+selectVideo(buttons[0]);
+
+</script>
+
+
+</body>
+</html>

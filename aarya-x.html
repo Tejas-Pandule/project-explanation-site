@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AARYA-X | AARYANS POWER</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="brand">AARYANS POWER</div></header>
+<main class="layout">
+<div class="top">
+<div><div class="eyebrow">Exhibition Project</div><h1>AARYA-X</h1></div>
+<a class="back" href="index.html">← Projects</a>
+</div>
+<div class="workspace">
+<aside class="questions">
+<div class="questions-title">Questions</div>
+<button class="question" data-index="0" data-drive-id="" data-title="Question 1"><span class="num">01</span><span>Question 1</span></button>
+<button class="question" data-index="1" data-drive-id="" data-title="Question 2"><span class="num">02</span><span>Question 2</span></button>
+<button class="question" data-index="2" data-drive-id="" data-title="Question 3"><span class="num">03</span><span>Question 3</span></button>
+<button class="question" data-index="3" data-drive-id="" data-title="Question 4"><span class="num">04</span><span>Question 4</span></button>
+<button class="question" data-index="4" data-drive-id="" data-title="Question 5"><span class="num">05</span><span>Question 5</span></button>
+<button class="question" data-index="5" data-drive-id="" data-title="Question 6"><span class="num">06</span><span>Question 6</span></button>
+<button class="question" data-index="6" data-drive-id="" data-title="Question 7"><span class="num">07</span><span>Question 7</span></button>
+<button class="question" data-index="7" data-drive-id="" data-title="Question 8"><span class="num">08</span><span>Question 8</span></button>
+<button class="question" data-index="8" data-drive-id="" data-title="Question 9"><span class="num">09</span><span>Question 9</span></button>
+<button class="question" data-index="9" data-drive-id="" data-title="Question 10"><span class="num">10</span><span>Question 10</span></button>
+</aside>
+<section class="viewer">
+<div class="viewer-head">
+<div><div class="eyebrow">Video</div><div class="viewer-title" id="title">Select a question</div></div>
+<div class="status" id="status">Ready</div>
+</div>
+<div class="video" id="video">
+<div class="placeholder"><div><strong>Select a question</strong><span>The Google Drive video will appear here.</span></div></div>
+</div>
+</section>
+</div>
+</main>
+<script>
+const buttons = [...document.querySelectorAll(".question")];
+const title = document.getElementById("title");
+const status = document.getElementById("status");
+const video = document.getElementById("video");
+
+function selectVideo(button) {
+  buttons.forEach(b => b.classList.remove("active"));
+  button.classList.add("active");
+  const driveId = button.dataset.driveId.trim();
+  const questionTitle = button.dataset.title;
+  title.textContent = questionTitle;
+  if (!driveId) {
+    status.textContent = "Not configured";
+    video.innerHTML = '<div class="placeholder"><div><strong>Video not configured</strong><span>Add the Google Drive file ID in this page.</span></div></div>';
+    return;
+  }
+  status.textContent = "Google Drive";
+  video.innerHTML = '<iframe src="https://drive.google.com/file/d/' + encodeURIComponent(driveId) + '/preview?autoplay=1" allow="autoplay; fullscreen" allowfullscreen title="' + questionTitle.replaceAll('"','&quot;') + '"></iframe>';
+}
+
+buttons.forEach(button => button.addEventListener("click", () => selectVideo(button)));
+selectVideo(buttons[0]);
+</script>
+</body>
+</html>
