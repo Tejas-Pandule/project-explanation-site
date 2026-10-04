@@ -2,17 +2,6 @@
 
 Simple static website.
 
-## Architecture
-
-- No Firebase
-- No Firebase Hosting configuration
-- No Firebase Storage
-- No Firestore
-- No authentication
-- No backend
-- No database
-- No admin panel
-- Videos are opened directly from Google Drive using the Drive preview player.
 
 ## Separate project pages
 
