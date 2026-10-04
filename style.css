@@ -349,3 +349,69 @@ code{background:#eef0f2;padding:.125rem .3rem}
   font-weight:700;
   padding:1rem;
 }
+
+/* ---------- Full-screen button + pseudo full screen (video-tools.js) ---------- */
+.video-tools{margin-top:.625rem}
+.fs-btn{
+  width:100%;
+  min-height:3rem;
+  border:1px solid var(--blue);
+  background:var(--blue);
+  color:#fff;
+  font-weight:700;
+  font-size:.95rem;
+  cursor:pointer;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+.fs-btn:focus-visible,.fs-close:focus-visible{outline:3px solid #000;outline-offset:2px}
+@media (min-width:900px){
+  .video-tools{display:flex;justify-content:flex-end}
+  .fs-btn{width:auto;padding:0 1.25rem}
+}
+
+body.fs-lock{overflow:hidden}
+
+.video.fs-on{
+  position:fixed;
+  top:0;left:0;
+  width:100vw;
+  height:100vh;
+  height:100dvh;
+  max-width:none;
+  margin:0;
+  aspect-ratio:auto;
+  z-index:9999;
+  background:#000;
+}
+/* phone held upright: turn the video sideways so it fills the screen */
+.video.fs-on.fs-rotate{
+  width:100vh;
+  width:100dvh;
+  height:100vw;
+  transform-origin:top left;
+  transform:translateX(100vw) rotate(90deg);
+}
+.fs-close{
+  position:fixed;
+  z-index:10000;
+  top:max(.5rem,env(safe-area-inset-top));
+  left:50%;
+  transform:translateX(-50%);
+  min-height:2.5rem;
+  padding:0 1rem;
+  border:0;
+  border-radius:999px;
+  background:rgba(0,0,0,.65);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+.fs-close[hidden]{display:none}
+
+/* phones: video runs edge to edge, so it is as big as possible */
+@media (max-width:599px){
+  .viewer{padding:0}
+  .viewer-head{padding:.625rem .75rem;margin-bottom:0}
+  .video-tools{margin:0;padding:.5rem .625rem .625rem}
+}
